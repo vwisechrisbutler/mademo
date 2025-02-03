@@ -1,0 +1,109 @@
+/** Button Styles
+  *
+  * Import this file using
+  * @import "modules/buttons";
+  *
+  */
+
+button,
+.button {
+  background: $transparent;
+  border: $heavy-border;
+  border-radius: $btn-radius;
+  color: $primary-lt;
+  cursor:pointer;
+  display: inline-block;
+  font-family: $primary-font;
+  font-size:1.6vw;
+  font-weight: $bold;
+  line-height:4vw;
+  margin:4vw .4vw;
+  outline: 0 !important;
+  padding:0 1.6vw;
+  text-transform: capitalize;
+
+  &.color-primary {
+    background: $primary-lt;
+  }
+
+  &.smartplan {
+    border: none;
+    cursor: pointer;
+    height: 5vw;
+    margin: 2vw 0 0;
+    padding: 0;
+    width: auto;
+  }
+
+  &.wide {
+    min-width: 15vw;
+  }
+}
+
+.questions-nav{
+  button {
+    display: grid;
+    font-size: 1.25vw;
+    height: 3.1944vw;
+    margin: 0.5vw;
+    place-content: center;
+    width: 9.5833vw;
+
+    &.restart-audio {
+      align-items: center;
+      border: 0;
+      display: flex;
+      justify-content: center;
+      margin-right: auto;
+      padding: 0;
+      width: auto;
+
+      img {
+        display: block;
+        margin-right: 0.8333vw;
+        width: 1.5972vw;
+      }
+
+      &::after {
+        content: "Replay Audio";
+        font-size: 0.8333vw;
+        font-weight: $xt-bold;
+        letter-spacing: 0.1388vw;
+        text-transform: uppercase;
+      }
+    }
+
+    img {
+      height: auto;
+      width: 3vw;
+    }
+  }
+}
+
+.accept-buttons {
+  button {
+    margin: 0.6944vw;
+  }
+}
+
+#professional_mgmt {
+  .accept-buttons {
+    button {
+      display: inline-grid;
+      font-size: 1.6666vw;
+      height: 5.625vw;
+      place-content: center;
+      width: 18.5416vw;
+    }
+  }
+}
+
+#thank_you {
+  button {
+    display: grid;
+    font-size: 1.3888vw;
+    height: 3.4722vw;
+    place-content: center;
+    width: 10.6944vw;
+  }
+}

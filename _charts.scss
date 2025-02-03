@@ -1,0 +1,73 @@
+/** Bar Chart Styles
+  *
+  * Import this file using
+  * @import "modules/charts";
+  *
+  */
+
+
+.bar_container {
+  width:92%;
+  left:4%;
+  height:5vw;
+  margin-bottom:2vw;
+
+  h5 {
+    display:inline-block;
+    width:30%;
+    color:$primary-lt;
+    margin:0;
+    font-weight:$normal;
+    height:5vw;
+    vertical-align: middle;
+  }
+
+}
+
+.es {
+  .bar_container:nth-child(2) {
+    h5 {
+      padding: 1vw 0;
+      vertical-align: top;
+    }
+  }
+}
+
+.bar {
+  display:inline-block;
+  width:68%;
+  height:5vw;
+  border-radius:2px;
+  line-height:5vw;
+  overflow:hidden;
+  background:rgba(0,0,0,.5);
+
+  .fill {
+    background:$primary-lt;
+    height:100%;
+    position: absolute;
+    transition:width 1s;
+  }
+
+  &.secondary {
+    border-top:0;
+    border-color:rgba(255,255,255,.6);
+
+    .fill {
+      opacity:.6;
+    }
+
+  }
+
+  .figure {
+    font-size: 1.8vw;
+    padding:0 1vw;
+    font-weight: $normal;
+
+    sup {
+      font-size:1.5vw;
+    }
+
+  }
+
+}

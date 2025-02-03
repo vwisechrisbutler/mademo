@@ -1,0 +1,72 @@
+/** Common Messaging & Screen Styles (loading, error, etc.)
+  *
+  * Import this file using
+  * @import "modules/alerts";
+  *
+  */
+
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner {
+  position: absolute;
+  left:50%;
+  top:50%;
+  height:auto;
+  width:auto;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  text-align: center;
+
+  img {
+    height:8vw;
+    width:auto;
+    animation: spin 1s infinite linear;
+    -ms-animation: spin 1s infinite linear;
+    -moz-animation: spin 1s infinite linear;
+    -webkit-animation: spin 1s infinite linear;
+  }
+}
+
+
+
+#loading,
+#error-message,
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.message-container {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 1001;
+  background: $transparent;
+
+  button {
+    margin: 2vw auto;
+  }
+
+}
+
+#error-message {
+  .message-container {
+    width: 65vw;
+  }
+  p {
+    font-size: 2vw;
+    font-weight: $light;
+  }
+}

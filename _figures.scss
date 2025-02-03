@@ -1,0 +1,31 @@
+/** Figure Styles
+  *
+  * Import this file using
+  * @import "modules/figures";
+  *
+  */
+
+
+.figure {
+  font-size:4vw;
+  font-weight:$light;
+  letter-spacing:.24vw;
+
+  sup {
+    font-size:2vw;
+    padding-top:.16vw;
+  }
+
+  sub {
+    font-size:1.6vw;
+    vertical-align: baseline;
+    font-weight: $light;
+    letter-spacing: normal;
+
+    &.contribution-rate {
+      font-size:1.2vw;
+    }
+
+  }
+
+}

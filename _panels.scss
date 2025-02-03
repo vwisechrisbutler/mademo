@@ -1,0 +1,38 @@
+/** Panel Styles
+  *
+  * Import this file using
+  * @import "modules/panels";
+  *
+  */
+
+
+.panel {
+  background:$primary-lt;
+  box-shadow: $panel-shadow;
+  border-radius: $radius;
+  padding: 1.6vw;
+  padding-bottom: .8vw;
+  position: absolute;
+  width: 100%;
+
+  label {
+    text-transform: uppercase;
+    font-size:1.2vw;
+    font-weight:$bold;
+  }
+
+  .figure {
+    font-weight:$normal;
+
+    sub {
+      font-weight: $light;
+      text-transform: lowercase;
+    }
+
+  }
+
+}
+
+// .col .panel {
+// width:100%;
+// }

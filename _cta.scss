@@ -1,21 +1,237 @@
-#cta {
-    left:50%;
-    text-align:center;
-    max-width:40%;
-    padding-top:20%;
-    article {
-        position: relative;
-        top:auto;
-        left:auto;
-        width:auto;
+/** Confirmation & CTA Slide Styles
+  *
+  * Import this file using
+  * @import "modules/cta";
+  *
+  */
+
+
+.no-video,
+.confirmation {
+  position: absolute;
+  width:100%;
+  height:100%;
+  padding-top:15%;
+  top: 0;
+  opacity: 1;
+
+  h1 {
+    margin-bottom:1vw;
+  }
+  h2 {
+    margin-bottom: 2vw;
+  }
+  h3 {
+  margin-bottom:2vw;
+  }
+}
+
+.confirmation {
+  text-align: center;
+  z-index: 100;
+
+  .compact {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+}
+
+#confirmation {
+	display: none;
+	> article {
+    display: none;
+		padding-top: 10%;
+    &.cta {
+      padding-top: 7%;
     }
-    button {
-        background-color:$light-blue;
-        &:hover {
-            background-color:$dark-blue;
+    &.manual {
+      padding-top: 15%;
+    }
+    h3 {
+      > span {
+        font-weight: 200;
+      }
+    }
+	}
+}
+
+#cta_allocate {
+  width: 90%;
+  left: 5%;
+    #slider {
+      margin: 5vw 0 3vw;
+      height: 8vw;
+
+      .allocate-val {
+        display: inline-block;
+        width: 12%;
+        > h5 {
+          margin-bottom: 1.55vw;
+          margin-top: 0;
+          text-align: center;
+          > .icon-info {
+            padding-left: 1.8vw;
+            cursor: pointer;
+            position: relative;
+            bottom: -1.1vw;
+            opacity: .75;
+            &:hover {
+              opacity: 1;
+            }
+          }
         }
+        > h1 {
+          font-weight: 100;
+          font-size: 3.25vw;
+        }
+      }
+      #allocate_pretax {
+        text-align: right;
+        float: left;
+        margin-left: 7%;
+        margin-right: 3%;
+      }
+      #allocate_roth {
+        text-align: left;
+        float: right;
+        margin-left: 3%;
+        margin-right: 7%;
+        > h5 {
+          > .icon-info {
+            margin-right: .75vw;
+          }
+        }
+      }
+
+
+      #allocate_slider {
+        width: 50%;
+        display: inline-block;
+        margin: 4vw 0;
+      }
+      #data_diffDeferral {
+        display: none;
+      }
     }
-    &.centered {
-        left:30%;
+  }
+
+  #allocate_confirm {
+
+    h3 {
+      font-size: 2.25vw;
+      margin-top: 3vw;
+      margin-bottom: 0;
+      background: #fff;
+      border-radius: .4vw;
+      padding: 1.75vw;
     }
+
+    .checkbox {
+      width: 2.5vw;
+      height: 2.5vw;
+      display: inline-block;
+      vertical-align: text-bottom;
+      position: relative;
+      margin-right: .75vw;
+      label {
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        border: 1px solid #979797;
+        border-radius: 2px;
+        box-shadow: inset 0 1px 3px 0 rgba(0,0,0,.5);
+        z-index: 1;
+        //background-color: #fff;
+      }
+      > input {
+        opacity: 0;
+        border: none;
+        width: 100%;
+        height: 100%;
+        z-index: 11;
+        position: absolute;
+        left: -3px;
+        top: -3px;
+      }
+      > input:checked + label:after {
+      	content: '';
+      	display: block;
+      	position: absolute;
+      	width: 3vw;
+      	height: 3vw;
+      	left: 3px;
+      	bottom: -3px;
+      	background-size: contain;
+      	background-repeat: no-repeat;
+      	background-image: url('../img/input-checkmark.svg');
+      }
+    }
+
+  }
+
+#matchForm {
+  h1 {
+    font-size: 3vw;
+    font-weight: 400;
+  }
+}
+
+#powerview_redirect {
+  #cta {
+    article {
+
+      &:nth-child(1) {
+        top: 25%;
+      }
+      &:nth-child(2) {
+        top: 40%;
+      }
+      &:nth-child(3) {
+        top: 55%;
+      }
+
+    }
+  }
+}
+
+#powerview_smartplan {
+  #cta {
+    h1 {
+      max-width: 35vw;
+      margin: 0 auto;
+    }
+    img {
+      &.smartplan {
+        max-height: 5vw;
+        margin-bottom: -1vw;
+      }
+    }
+  }
+}
+
+.es {
+
+  #powerview_redirect {
+    #cta {
+      .cta {
+        &:nth-child(3) {
+          width: 90%;
+          left: 55%;
+        }
+      }
+    }
+  }
+
+  #cta_allocate {
+    #allocate_pretax {
+      > h5 {
+        white-space: nowrap;
+        margin-left: -5vw;
+        width: 18vw;
+      }
+    }
+  }
 }
