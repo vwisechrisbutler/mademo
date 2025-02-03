@@ -1,0 +1,458 @@
+@import "../partials/base";
+
+/** interface-micro-library
+  * A jQuery tooltip/popover/modal plugin
+  * Developed under the MIT license http://opensource.org/licenses/MIT
+  * Designed for quick creation of interface elements
+  **/
+
+.tooltip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  display: none;
+  z-index: 999;
+  div {
+    font-family: $secondary-font;
+    background: $secondary-dk;
+    color: $primary-lt;
+    font-size: 12px;
+    max-width: 340px;
+    text-align: left;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    -ms-user-select: none;
+    cursor: default;
+    padding: 10px 15px;
+    &:after {
+      content: '';
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      border: 5px solid transparent;
+      z-index: 11;
+    }
+  }
+  &.top div:after {
+    left: 50%;
+    bottom: -11px;
+    margin-left: -5px;
+  }
+  &.bottom div:after {
+    left: 50%;
+    top: -11px;
+    margin-left: -5px;
+  }
+  &.left div:after {
+    bottom: 50%;
+    right: -11px;
+    margin-bottom: -5px;
+  }
+  &.right div:after {
+    bottom: 50%;
+    left: -11px;
+    margin-bottom: -5px;
+  }
+  &.top-right div:after {
+    left: 90%;
+    bottom: -11px;
+    margin-left: -5px;
+  }
+  &.top-left div:after {
+    left: 10%;
+    bottom: -11px;
+    margin-left: -5px;
+  }
+  &.bottom-right div:after {
+    left: 90%;
+    top: -11px;
+    margin-left: -5px;
+  }
+  &.bottom-left div:after {
+    left: 10%;
+    top: -11px;
+    margin-left: -5px;
+  }
+  &.left-top div:after {
+    bottom: 65%;
+    right: -11px;
+    margin-bottom: -5px;
+  }
+  &.left-bottom div:after {
+    bottom: 35%;
+    right: -11px;
+    margin-bottom: -5px;
+  }
+  &.right-top div:after {
+    bottom: 65%;
+    left: -11px;
+    margin-bottom: -5px;
+  }
+  &.right-bottom div:after {
+    bottom: 35%;
+    left: -11px;
+    margin-bottom: -5px;
+  }
+  &.white {
+    div {
+      background: $primary-lt;
+      color: $primary-md;
+    }
+    &.top div:after, &.top-right div:after, &.top-left div:after {
+      border-top-color: $primary-lt;
+    }
+    &.bottom div:after, &.bottom-right div:after, &.bottom-left div:after {
+      border-bottom-color: $primary-lt;
+    }
+    &.left div:after, &.left-top div:after, &.left-bottom div:after {
+      border-left-color: $primary-lt;
+    }
+    &.right div:after, &.right-top div:after, &.right-bottom div:after {
+      border-right-color: $primary-lt;
+    }
+  }
+  &.black {
+    div {
+      background: rgba(0, 0, 0, 0.8);
+    }
+    &.top div:after, &.top-right div:after, &.top-left div:after {
+      border-top-color: rgba(0, 0, 0, 0.8);
+    }
+    &.bottom div:after, &.bottom-right div:after, &.bottom-left div:after {
+      border-bottom-color: rgba(0, 0, 0, 0.8);
+    }
+    &.left div:after, &.left-top div:after, &.left-bottom div:after {
+      border-left-color: rgba(0, 0, 0, 0.8);
+    }
+    &.right div:after, &.right-top div:after, &.right-bottom div:after {
+      border-right-color: rgba(0, 0, 0, 0.8);
+    }
+  }
+  &.error {
+    div {
+      background: #f56969;
+    }
+    &.top div:after, &.top-right div:after, &.top-left div:after {
+      border-top-color: #f56969;
+    }
+    &.bottom div:after, &.bottom-right div:after, &.bottom-left div:after {
+      border-bottom-color: #f56969;
+    }
+    &.left div:after, &.left-top div:after, &.left-bottom div:after {
+      border-left-color: #f56969;
+    }
+    &.right div:after, &.right-top div:after, &.right-bottom div:after {
+      border-right-color: #f56969;
+    }
+  }
+  &.success {
+    div {
+      background: #94C775;
+    }
+    &.top div:after, &.top-right div:after, &.top-left div:after {
+      border-top-color: #94C775;
+    }
+    &.bottom div:after, &.bottom-right div:after, &.bottom-left div:after {
+      border-bottom-color: #94C775;
+    }
+    &.left div:after, &.left-top div:after, &.left-bottom div:after {
+      border-left-color: #94C775;
+    }
+    &.right div:after, &.right-top div:after, &.right-bottom div:after {
+      border-right-color: #94C775;
+    }
+  }
+  &.smoke {
+    div {
+      background: rgba(90, 103, 121, 0.95);
+    }
+    &.top div:after, &.top-right div:after, &.top-left div:after {
+      border-top-color: rgba(90, 103, 121, 0.95);
+    }
+    &.bottom div:after, &.bottom-right div:after, &.bottom-left div:after {
+      border-bottom-color: rgba(90, 103, 121, 0.95);
+    }
+    &.left div:after, &.left-top div:after, &.left-bottom div:after {
+      border-left-color: rgba(90, 103, 121, 0.95);
+    }
+    &.right div:after, &.right-top div:after, &.right-bottom div:after {
+      border-right-color: rgba(90, 103, 121, 0.95);
+    }
+  }
+}
+
+.popover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  display: none;
+  z-index: 999;
+  div {
+    font-family: $secondary-font;
+    background: $primary-dk;
+    color: $primary-lt;
+    font-size: 12px;
+    max-width: 250px;
+    text-align: left;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    -ms-user-select: none;
+    cursor: default;
+  }
+}
+
+.popover_title {
+  border-radius: 3px 3px 0px 0px;
+  padding: 5px 15px;
+}
+
+.popover_content {
+  border-radius: 0 0 3px 3px;
+  padding: 5px 15px;
+}
+
+.popover_content_s {
+  border-radius: 3px;
+  padding: 5px 15px;
+}
+
+.popover {
+  div:after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    border: 5px solid transparent;
+    z-index: 11;
+  }
+  &.top div:after {
+    left: 50%;
+    bottom: -11px;
+    margin-left: -5px;
+  }
+  &.bottom div:after {
+    left: 50%;
+    top: -11px;
+    margin-left: -5px;
+  }
+  &.left div:after {
+    bottom: 50%;
+    right: -11px;
+    margin-bottom: -5px;
+  }
+  &.right div:after {
+    bottom: 50%;
+    left: -11px;
+    margin-bottom: -5px;
+  }
+  &.top-right div:after {
+    left: 90%;
+    bottom: -11px;
+    margin-left: -5px;
+  }
+  &.top-left div:after {
+    left: 10%;
+    bottom: -11px;
+    margin-left: -5px;
+  }
+  &.bottom-right div:after {
+    left: 90%;
+    top: -11px;
+    margin-left: -5px;
+  }
+  &.bottom-left div:after {
+    left: 10%;
+    top: -11px;
+    margin-left: -5px;
+  }
+  &.left-top div:after {
+    bottom: 75%;
+    right: -11px;
+    margin-bottom: -5px;
+  }
+  &.left-bottom div:after {
+    bottom: 25%;
+    right: -11px;
+    margin-bottom: -5px;
+  }
+  &.right-top div:after {
+    bottom: 75%;
+    left: -11px;
+    margin-bottom: -5px;
+  }
+  &.right-bottom div:after {
+    bottom: 25%;
+    left: -11px;
+    margin-bottom: -5px;
+  }
+  &.smoke {
+    div {
+      &.popover_title {
+        background: $secondary-dk;
+        border-bottom: 1px solid $secondary-dk;
+      }
+      &.popover_content, &.popover_content_s {
+        background: rgba(90, 103, 121, 0.95);
+      }
+    }
+    &.top div:after, &.top-right div:after, &.top-left div:after {
+      border-top-color: rgba(90, 103, 121, 0.95);
+    }
+    &.bottom div:after, &.bottom-right div:after, &.bottom-left div:after {
+      border-bottom-color: rgba(90, 103, 121, 0.95);
+    }
+    &.left div:after, &.left-top div:after, &.left-bottom div:after {
+      border-left-color: rgba(90, 103, 121, 0.95);
+    }
+    &.right div:after, &.right-top div:after, &.right-bottom div:after {
+      border-right-color: rgba(90, 103, 121, 0.95);
+    }
+  }
+  &.error {
+    div {
+      &.popover_title {
+        background: #DC5E5E;
+        border-bottom: 1px solid #DC5E5E;
+      }
+      &.popover_content, &.popover_content_s {
+        background: #f56969;
+      }
+    }
+    &.top div:after, &.top-right div:after, &.top-left div:after {
+      border-top-color: #f56969;
+    }
+    &.bottom div:after, &.bottom-right div:after, &.bottom-left div:after {
+      border-bottom-color: #f56969;
+    }
+    &.left div:after, &.left-top div:after, &.left-bottom div:after {
+      border-left-color: #f56969;
+    }
+    &.right div:after, &.right-top div:after, &.right-bottom div:after {
+      border-right-color: #f56969;
+    }
+  }
+  &.success {
+    div {
+      &.popover_title {
+        background: #85B369;
+        border-bottom: 1px solid #85B369;
+      }
+      &.popover_content, &.popover_content_s {
+        background: #94C775;
+      }
+    }
+    &.top div:after, &.top-right div:after, &.top-left div:after {
+      border-top-color: #94C775;
+    }
+    &.bottom div:after, &.bottom-right div:after, &.bottom-left div:after {
+      border-bottom-color: #94C775;
+    }
+    &.left div:after, &.left-top div:after, &.left-bottom div:after {
+      border-left-color: #94C775;
+    }
+    &.right div:after, &.right-top div:after, &.right-bottom div:after {
+      border-right-color: #94C775;
+    }
+  }
+  &.black {
+    div {
+      &.popover_title {
+        background: rgba(0, 0, 0, 0.8);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.8);
+      }
+      &.popover_content, &.popover_content_s {
+        background-color: rgba(20, 20, 20, 0.8);
+      }
+    }
+    &.top div:after, &.top-right div:after, &.top-left div:after {
+      border-top-color: rgba(20, 20, 20, 0.8);
+    }
+    &.bottom div:after, &.bottom-right div:after, &.bottom-left div:after {
+      border-bottom-color: rgba(20, 20, 20, 0.8);
+    }
+    &.left div:after, &.left-top div:after, &.left-bottom div:after {
+      border-left-color: rgba(20, 20, 20, 0.8);
+    }
+    &.right div:after, &.right-top div:after, &.right-bottom div:after {
+      border-right-color: rgba(20, 20, 20, 0.8);
+    }
+  }
+  &.white {
+    div {
+      &.popover_title {
+        background: $secondary-lt;
+        border-bottom: 1px solid $secondary-lt;
+        color: $primary-md;
+      }
+      &.popover_content, &.popover_content_s {
+        background-color: $primary-lt;
+        color: $primary-md;
+      }
+    }
+    &.top div:after, &.top-right div:after, &.top-left div:after {
+      border-top-color: $primary-lt;
+    }
+    &.bottom div:after, &.bottom-right div:after, &.bottom-left div:after {
+      border-bottom-color: $primary-lt;
+    }
+    &.left div:after, &.left-top div:after, &.left-bottom div:after {
+      border-left-color: $primary-lt;
+    }
+    &.right div:after, &.right-top div:after, &.right-bottom div:after {
+      border-right-color: $primary-lt;
+    }
+  }
+}
+
+#background {
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+  z-index: 1000;
+  left: 0;
+  display: none;
+}
+
+.modal {
+  font-family: $secondary-font;
+  color: $primary-dk;
+  font-size: 13px;
+  position: absolute;
+  border-radius: 5px;
+  background: #fff;
+  display: none;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+  z-index: 3000;
+  cursor: default;
+}
+
+.modal_title {
+  font-size: 15px;
+  border-bottom: 1px solid $secondary-lt;
+  padding: 20px 0;
+  margin: 10px 30px;
+}
+
+.modal_content {
+  padding: 10px 30px 0 30px;
+}
+
+.modal .close {
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  color: #fff;
+  font-family: $secondary-font;
+  font-weight: bold;
+  font-size: 40px;
+  display: block;
+  z-index: 5555;
+  cursor: pointer;
+}
