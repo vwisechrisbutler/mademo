@@ -1,0 +1,165 @@
+/* Typography
+ *
+ * Import this file using
+ * @import "partials/typography";
+ */
+
+
+h1,h2,h3,h4,h5,h6 {
+	font-weight: $light;
+	margin:0;
+}
+
+h1 {
+	font-size: 4vw;
+	font-weight: $light;
+}
+
+h2 {
+	font-size:2.8vw;
+	font-weight: $light;
+}
+
+h3 {
+	font-size:2vw;
+	font-weight: $normal; //500
+}
+
+h3.label {
+	font-size:1.6vw;
+	font-weight: $bold;
+	letter-spacing:.4vw;
+	text-transform: uppercase;
+}
+
+h4 {
+	font-size: 1.6vw;
+	line-height: 1.6vw;
+	text-transform: uppercase;
+}
+
+h5 {
+	font-size: 1.2vw;
+	font-weight: $normal;
+	letter-spacing: $ltr-space;
+	margin: .8vw auto;
+	text-transform:uppercase;
+}
+
+a,
+a:hover,
+a:visited {
+	text-decoration: none;
+}
+
+small {
+	color: $primary-md;
+	display:block;
+	font-size:1.4vw;
+	margin:30px auto;
+	text-align:left;
+	width:70vw;
+}
+
+small.sms-rates {
+	bottom: 1vw;
+	color: $primary-lt;
+	font-size: 1vw;
+	font-weight: $thin;
+	position: absolute;
+	text-align: center;
+	width: 100%;
+}
+
+[class^="icon-"] {
+	background-repeat: no-repeat;
+	background-size: contain;
+	font-size: 2.5vw;
+	font-weight: $light;
+	line-height: 3vw;
+	margin-bottom: 2vw;
+	padding-left: 4vw;
+	text-align: left;
+}
+
+.icon-progress {
+	background-image: url('../img/icon-progress.svg');
+}
+.icon-changes {
+	background-image: url('../img/icon-changes.svg');
+}
+.icon-info {
+	background-image: url('../img/icon-info.svg');
+}
+.icon-check {
+	background-image: url('../img/icon-check.svg');
+}
+
+.light {
+  font-weight: $light;
+}
+
+.full {
+  input {
+    font-size: 1.5vw;
+  }
+}
+
+#good_start {
+  h1 {
+    font-weight: $bold;
+  }
+}
+
+#questions,
+#confirmations {
+  h1 {
+    font-size: 3.194vw;
+    font-weight: $mid;
+  }
+
+  p {
+    font-size: 2.083vw;
+  }
+}
+
+#professional_mgmt {
+  p {
+    max-width: 45ch;
+  }
+
+  .fee-disclosure {
+    font-size: 1.3888vw;
+    font-weight: $light;
+  }
+}
+
+#terms {
+  p {
+    font-size: 1.6667vw;
+  }
+}
+
+#congrats,
+#thank_you {
+  line-height: 1.5;
+
+  h1 {
+    font-size: 4.4444vw;
+    font-weight: $light;
+  }
+
+  p {
+    font-size: 2.0833vw;
+    font-weight: $normal;
+  }
+
+  p + p {
+    margin-top: 1vw;
+  }
+}
+
+article.copy li {
+	font-size:1.75vw;
+	margin:3% 0;
+}

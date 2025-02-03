@@ -1,0 +1,155 @@
+.video-container::before {
+  background-color: #fff;
+  content: "";
+  display: block;
+  height: 100%;
+  left: 50%;
+  padding: 0;
+  position: absolute;
+  width: 50%;
+  z-index: 2;
+  display: none;
+}
+
+video {
+  height:100%;
+  position: absolute;
+  width:auto;
+}
+
+.container.hold .video-controls {
+  display: none !important;
+}
+
+
+.video-controls.show {
+  bottom: 0;
+  transition: bottom .5s;
+}
+
+
+.video-controls {
+  background:rgba($primary-dk, .75);
+  bottom:-5vw;
+  display:block;
+  height:5vw;
+  left:0;
+  line-height:5vw;
+  margin:0;
+  overflow:hidden;
+  padding:0 2.5vw;
+  position: absolute;
+  transition: bottom .5s;
+  width:100%;
+  z-index: 20;
+
+  .play {
+    background-image: url('../img/play.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor:pointer;
+    display: inline-block;
+    height: 2.5vw;
+    position: absolute;
+    top:1.25vw;
+    width: 2.5vw;
+  }
+
+  .pause {
+    background-image: url('../img/pause.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor:pointer;
+    display:inline-block;
+    height:2.5vw;
+    position: absolute;
+    text-align:left;
+    top:1.25vw;
+    width:2.5vw;
+
+  }
+
+  input[name=seek] {
+    background-color: $transparent;
+    cursor: pointer;
+    display: inline-block;
+    height: 2vw;
+    margin-left: 4vw;
+    vertical-align: middle;
+    width: 70vw;
+    z-index: 10;
+
+    // --track-point: 0%;
+  }
+
+  @mixin track() {
+    background-color: $primary-md;
+    height: 2vw;
+  }
+
+  input[name=seek] {
+    &::-webkit-slider-runnable-track { @include track }
+    &::-moz-range-track { @include track }
+    &::-ms-track { @include track }
+  }
+
+  @mixin thumb() {
+    background-color: transparent;
+    border: none;
+    height: 100%;
+    width: 1px;
+  }
+
+  input[name=seek] {
+    &::-webkit-slider-thumb { @include thumb }
+    &::-moz-range-thumb { @include thumb }
+    &::-ms-thumb { @include thumb }
+  }
+
+  /*Chrome*/
+  @media screen and (-webkit-min-device-pixel-ratio: 0) {
+    input[name=seek] {
+      -webkit-appearance: none;
+      background-color: $primary-md;
+      overflow: hidden;
+    }
+
+    input[name=seek]::-webkit-slider-runnable-track {
+      -webkit-appearance: none;
+    }
+
+    input[name=seek]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      box-shadow: -9999px 0 0 9999px #019ee3;
+    }
+  }
+
+  /** FF*/
+  input[name=seek]::-moz-range-progress {
+    background-color: #019ee3;
+    height: 2vw;
+  }
+
+  /* IE*/
+  input[name=seek]::-ms-fill-lower {
+    background-color: #019ee3;
+  }
+
+  input[name=seek]::-ms-fill-upper {
+    background-color: $primary-md;
+  }
+
+}
+
+#debug-timestamp {
+  position:fixed;
+  padding:10px;
+  padding-right:30px;
+  left:0;
+  top:0;
+  margin:0;
+  // color:transparent;
+  &:hover {
+    color:#666;
+  }
+}

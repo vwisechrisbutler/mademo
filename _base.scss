@@ -1,0 +1,87 @@
+/** Base Styles
+  *
+  * Inlude your style variables here that will be reused throughout the widget(s).
+  *
+  * Import this file using
+  * @import "partials/base";
+  *
+  */
+
+
+// Font Families
+$primary-font: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$secondary-font: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+// Font Weights
+$thin: 100;
+$light: 300;
+$normal: 400;
+$mid: 500;
+$bold: 700;
+$xt-bold: 900;
+
+// Letter Spacing
+$ltr-space: .16vw;
+$btn-ltr-space: .25vw;
+
+// Non-Brand Colors
+$primary-lt: #fff;
+$secondary-lt: #f5f5f5;
+$primary-md: #9a9a9a;
+$secondary-md: #9b9b9b;
+$primary-dk: #444;
+$secondary-dk: #666;
+$error: #ff0000;
+$transparent: rgba(255,255,255,0);
+
+// Borders
+$radius: .4vw;
+$btn-radius: .32vw;
+$input-radius: $btn-radius;
+$heavy-border: 2px solid $primary-lt;
+$video-ctrl-border: 10px solid transparent;
+$video-ctrl-border-left: 20px solid #fff;
+$video-ctrl-radius: 100px;
+
+// Box Shadows
+$container-shadow: 0 5px 10px 0 rgba(0,0,0,.3);
+$panel-shadow: 0px 5px 1px 0px rgba(0,0,0,0.10);
+$input-shadow: 0 .6vw 0 0 rgba(0,0,0,0.10);
+
+// White-labeling
+$dark-blue:#005598;
+$light-blue:#019EE3;
+$green:#7EB428;
+$teal:#3991D4;
+$orange:#E99929;
+$light-green:#B6D180;
+$light-orange:#EDBB2F;
+
+$primary:$light-blue;
+$secondary:$dark-blue;
+$tertiary:$green;
+$quaternary:$teal;
+
+.color-primary {
+  color: $primary;
+}
+
+.color-secondary {
+  color: $secondary;
+}
+
+.bg-primary,
+.widgets .vwise button,
+#analysis button:hover {
+  background: $primary;
+  border-color: $primary;
+  color: hsl(0deg 0% 100%);
+}
+
+.bg-secondary,
+.widgets .vwise button:hover,
+.modal.simple button[type=submit]:hover,
+#congrats button.confirm:hover {
+  background: $secondary;
+  color: #fff;
+}
