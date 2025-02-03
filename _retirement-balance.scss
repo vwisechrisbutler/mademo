@@ -1,0 +1,23 @@
+#retirement-balance {
+    left:47%;
+    h3 {
+        top:7%;
+        font-weight: 600;
+    }
+    h4 {
+        color:#9B9B9B;
+        font-weight:normal;
+        font-size:1.5vw;
+        text-transform:capitalize;
+    }
+    article.copy {
+        max-width:35%;
+        left:5%;
+        position:relative;
+        margin-bottom:5%;
+        h4 {
+            max-width: 80%;
+            line-height:2vw;
+        }
+    }
+}

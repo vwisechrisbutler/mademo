@@ -1,0 +1,21 @@
+#cta {
+    left:50%;
+    text-align:center;
+    max-width:40%;
+    padding-top:20%;
+    article {
+        position: relative;
+        top:auto;
+        left:auto;
+        width:auto;
+    }
+    button {
+        background-color:$light-blue;
+        &:hover {
+            background-color:$dark-blue;
+        }
+    }
+    &.centered {
+        left:30%;
+    }
+}

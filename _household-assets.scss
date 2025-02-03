@@ -1,0 +1,24 @@
+#household-assets {
+	p {
+		font-size:1.5vw;
+	}
+	.input-group {
+		width:auto;
+	}
+	.checkboxes {
+		display:grid;
+		grid-template-columns:auto auto;
+		gap:3%;
+		padding:3% 0;
+		label {
+			font-size:1.25vw;
+			margin-bottom:3%;
+			display:flex;
+			align-items:flex-start;
+		}
+		input[type="checkbox"] {
+			margin-right:5%;
+		}
+	}
+}
+
