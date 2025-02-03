@@ -1,0 +1,32 @@
+/** PowerView Mobile Styles
+  * In this file you should write your main styles. (or centralize your imports)
+  * Import this file using the following HTML or equivalent:
+  * <link href="w/css/powerview-mobile.css" media="screen" rel="stylesheet" type="text/css" />
+  */
+// Flexslider
+//@import "vendor/flexslider";
+
+// General Styles
+@import "mobile/partials/base";
+@import "mobile/partials/layout";
+@import "mobile/partials/typography";
+
+// Vendor Styles
+@import "vendor/noUiSlider";
+@import "vendor/iml";
+
+// Individual, Reusable Elements
+@import "mobile/modules/salaryForm";
+@import "mobile/modules/languageSelector";
+@import "mobile/modules/nav";
+@import "mobile/modules/buttons";
+@import "mobile/modules/forms";
+@import "mobile/modules/figures";
+@import "mobile/modules/cta";
+@import "mobile/modules/alerts";
+@import "mobile/modules/tooltips";
+@import "mobile/modules/slider";
+
+
+// Shoul be last to be added
+@import "mobile/partials/mediaqueries";

@@ -1,0 +1,33 @@
+/** PowerView Styles
+  * In this file you should write your main styles. (or centralize your imports)
+  * Import this file using the following HTML or equivalent:
+  * <link href="w/css/powerview.css" media="screen" rel="stylesheet" type="text/css" />
+  */
+
+// General Styles
+@import "partials/base";
+@import "partials/layout";
+@import "partials/typography";
+@import "partials/video";
+
+// Individual, Reusable Elements
+@import "modules/slides";
+@import "modules/salaryForm";
+@import "modules/languageSelector";
+@import "modules/buttons";
+@import "modules/forms";
+@import "modules/figures";
+@import "modules/charts";
+@import "modules/panels";
+@import "modules/cta";
+@import "modules/alerts";
+@import "modules/tooltips";
+@import "modules/slider";
+
+// Slides
+@import "slides/retirement-balance";
+@import "slides/household-assets";
+@import "slides/cta";
+
+// Should be last to be added
+@import "partials/mediaqueries";
